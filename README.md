@@ -1,10 +1,8 @@
 # api-stack-builders
 
-This is a little example asked for the technical interview from stack-builders that I won't have the time to complete due to time contraints
+This is a little example asked for the technical interview from stack-builders that I don't finnished during the interview due to time contraints (I think)
 
 It just an API that calls a Github api to asks from the repos  of my user
-
-
 
 ## Requirements
 
