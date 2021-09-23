@@ -22,20 +22,9 @@ import scala.concurrent.ExecutionContext
 
 import play.api.libs.concurrent.CustomExecutionContext
 
-/**
- * This controller creates an `Action` to handle HTTP requests to the
- * application's home page.
- */
 @Singleton
 class HomeController @Inject()(implicit ec: ExecutionContext, ws: WSClient, val controllerComponents: ControllerComponents) extends BaseController {
 
-  /**
-   * Create an Action to render an HTML page.
-   *
-   * The configuration in the `routes` file means that this method
-   * will be called when the application receives a `GET` request with
-   * a path of `/`.
-   */
   def index() =  Action.async { 
     val resp = ws.url("https://api.github.com/users/neowinx/repos").get()
     Future {
@@ -43,4 +32,5 @@ class HomeController @Inject()(implicit ec: ExecutionContext, ws: WSClient, val 
        Ok(popo.json)
     }
   }
+
 }
